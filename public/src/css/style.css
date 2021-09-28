@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+body {
+  position: relative !important;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+
+.row a img{
+  width: 75px !important;
+  height: 40px !important;
+}
+
+#table2{
+  display: none !important;
+}
+
+@media(max-width: 720px){
+  #table2{
+    display: flex !important;
+  }
+  #table1{
+    display: none !important;
+  }
+}
+
+/* .myFoot{
+  position: absolute;
+  width: 100%;
+} */
